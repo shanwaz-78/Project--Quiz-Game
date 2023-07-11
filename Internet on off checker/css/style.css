@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #283d47;
+}
+
+.popup {
+  width: 45%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  border-top: 5px solid rgb(189, 23, 23);
+  margin-left: 37%;
+  top: -25%;
+  visibility: hidden;
+  transition: all 0.25 ease;
+}
+.popup:hover {
+  box-shadow: 5px 5px 4px #69c5bf;
+}
+
+.popup.show {
+  top: 0;
+  visibility: visible;
+}
+.popup .icon i {
+  width: 35px;
+  height: 35px;
+  background-color: red;
+  display: flex;
+  border-radius: 50%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.popup .btn {
+  width: 35%;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(30, 99, 99);
+  height: 1.5rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.popup .btn:hover {
+  background-color: rgb(30, 117, 117);
+}
+.popup .desc {
+  margin-left: 5px;
+  font-family: sans-serif;
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 1.1rem;
+}
+
+.popup h2 {
+  text-align: center;
+}
+
+.popup h2::selection {
+  background-color: red;
+}
