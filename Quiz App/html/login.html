@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="icon" type="image/png" href="../images/login.png" />
+    <link rel="stylesheet" href="..//css/login.css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <form autocomplete="off">
+        <h2>Sign in</h2>
+
+        <div class="inputBox">
+          <input
+            type="text"
+            required 
+            id="shaking"
+            maxlength="30"
+            class="UserName"
+            pattern="[A-Za-z-' ']*"
+          />
+          <span>UserName</span>
+          <i></i>
+        </div>
+
+        <div class="inputBox">
+          <input type="password" required maxlength="10" class="password" />
+          <span>Password</span>
+          <i></i>
+        </div>
+
+        <div class="last">
+          <input type="submit" value="Login" id="Submit-button" />
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="../Js/loginPage.js"></script>
+</html>

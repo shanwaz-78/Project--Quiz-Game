@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/quizPage.css" />
+  </head>
+  <body>
+    <div class="category">
+   <select name="" id="categories" onchange="categoryChange()">
+        <option value="MCQ" id="MCQ">MCQ</option>
+        <option value="True-False" id="True-False">True-False</option>
+        <option value="Math" id="Math">Math</option>
+      </select>
+      <div class="main-div">
+        <div class="inner-div">
+          <div class="container">
+            <h2 id="title">Questions Comes Here</h2>
+            <div class="input_container">
+              <ul type="A">
+                <li>
+                  <input type="radio" name="answer" id="ans1" class="answer" />
+                  <label for="ans1" id="option1">Answer</label>
+                </li>
+
+                <li>
+                  <input type="radio" name="answer" id="ans2" class="answer" />
+                  <label for="ans2" id="option2">Answer</label>
+                </li>
+
+                <li>
+                  <input type="radio" name="answer" id="ans3" class="answer" />
+                  <label for="ans3" id="option3">Answer</label>
+                </li>
+
+                <li>
+                  <input type="radio" name="answer" id="ans4" class="answer" />
+                  <label for="ans4" id="option4">Answer</label>
+                </li>
+              </ul>
+              <h4 class="question_range"></h4>
+              <button id="Submit">Submit</button>
+              <label for="feedback" id="feedback">Feedback Here</label>
+              <div id="showScore" class="scoreArea" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../Js/quizPage.js"></script>
+</html>
