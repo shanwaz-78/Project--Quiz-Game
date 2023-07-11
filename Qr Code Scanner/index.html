@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qr Code Scanner</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudFlare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <div id="wrapper">
+    <form action="#">
+      <input type="file" id="upload_file" hidden accept=".png .jpg .jpeg">
+      <img src="./img/qr-code.png" alt="Qr Code" height="195px" width="195px">
+      <div class="content">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <p>Upload Qr Code To Scan</p>
+    </div> 
+    </form>
+  <div class="details">
+    <textarea name="" id="textarea" cols="30" rows="10" disabled>This is simple qr code reader app made in JavaScript</textarea>
+    <div class="button">
+      <button class="close">Close</button>
+      <button class="copy">Copy</button>
+    </div>
+  </div>
+</div>
+</body>
+<script src="./js/script.js"></script>
+</html>
