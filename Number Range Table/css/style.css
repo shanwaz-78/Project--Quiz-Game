@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+#main-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  padding: 5px;
+  margin: 0 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+#number-table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#number-table .table-container {
+  border: 1px solid #ccc;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container th,
+.table-container td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+  background-color: #009688;
+  color: white;
+}
+
+.table-container td {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.highlight {
+  background-color: #ffc107 !important;
+}
+
+.number-cell:hover {
+  cursor: pointer;
+}
+
