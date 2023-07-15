@@ -1,0 +1,57 @@
+body {
+  background: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: blanchedalmond;
+  padding: 45px 45px;
+  border-radius: 10px;
+}
+
+textarea {
+  box-sizing: border-box;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.countDetail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .counter {
+  color: green;
+  font-size: 22px;
+}
+
+.wrapper .remaining {
+  color: red;
+  font-size: 22px;
+}
+
+.copyButton {
+  text-align: center;
+  margin-right: 80px;
+}
+
+.btn {
+  position: absolute;
+  padding: 8px 12px;
+  font-size: 13px;
+  margin-top: 5px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
