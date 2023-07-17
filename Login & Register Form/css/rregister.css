@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Josefin+Sans:ital,wght@1,500&family=Lato&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --clr: #0ab3ff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: #1c2630;
+  overflow: hidden;
+}
+
+form {
+  background-color: #29313c;
+  padding: 60px 80px 50px;
+  text-align: center;
+  border-radius: 10px;
+  animation: sliding 2s;
+}
+form h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: 80px;
+}
+.inputBox {
+  width: 300px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+
+.inputBox input[type="button"] {
+  background: var(--clr);
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  transition: 0.3s;
+}
+
+.inputBox input[type="button"]:hover {
+  box-shadow: 0 4px 8px rgba(0, 0.2, 0.4, 0.6);
+  color: white;
+  letter-spacing: 5px;
+}
+form p {
+  color: white;
+  letter-spacing: 1.2px;
+}
+
+form p a {
+  color: var(--clr);
+  text-decoration: none;
+  position: relative;
+}
+
+form p a:hover {
+  border-bottom: 2px solid white;
+}
+.inputBox input:focus::placeholder {
+  color: #0ab3ff;
+}
+input::selection {
+  color: green;
+}
+
+@keyframes sliding {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../img/Login-page-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: formAnimation 3s;
+  overflow: hidden;
+}
+form {
+  background-color: #29313c;
+  padding: 50px 70px 60px;
+  padding: 60px 80px 50px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+h2 {
+  color: green;
+  font-size: 1.8rem;
+  letter-spacing: 1.1px;
+}
+.inputBox input {
+  width: 100%;
+  margin-top: 40px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  animation: borderAnimate 4s;
+  color: white;
+  border-bottom: 2px solid salmon;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.inputBox input:focus::placeholder {
+  color: #0ab3ff;
+}
+
+.inputBox input[type="submit"] {
+  border: none;
+  background-color: green;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.3s;
+}
+.inputBox input[type="submit"]:hover {
+  background-color: rgb(6, 92, 6);
+  letter-spacing: 1.7px;
+}
+@keyframes borderAnimate {
+  from {
+    border-bottom: 3px solid green;
+  }
+  10% {
+    border-bottom: 3px solid violet;
+  }
+  20% {
+    border-bottom: 3px solid rgb(40, 139, 139);
+  }
+  30% {
+    border-bottom: 3px solid rgba(0.1, 1, 0.2, 0.4);
+  }
+}
+
+@keyframes formAnimation {
+  from {
+    margin-left: 100%;
+  }
+  75% {
+    transform: rotate(-6deg) scaleX(0.8) translateY(-1rem);
+  }
+  to {
+    margin-left: 0%;
+  }
+}
