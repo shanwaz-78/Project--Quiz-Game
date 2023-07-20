@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Josefin+Sans:ital,wght@1,500&family=Lato&family=Poppins:ital,wght@0,200;0,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../img/bacground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inputWrapper {
+  margin: 23px;
+  margin-right: 38%;
+  padding: 8px 8px;
+}
+
+form {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 8% 8%;
+  width: 38%;
+  border-radius: 20px;
+  animation: sliding 0.3s;
+}
+
+h2 {
+  margin-bottom: 90px;
+}
+
+@keyframes sliding {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
