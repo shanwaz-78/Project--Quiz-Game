@@ -1,7 +1,8 @@
+require('dotenv').config();
 const connection = require("../database/connection");
 const express = require("express");
 const bcrypt = require("bcrypt");
-const port = process.env.PORT || 8001;
+const port = process.env.PORT || "8001";
 const path = require("path");
 const app = express();
 app.set("port", port);
@@ -56,4 +57,4 @@ app.get("*", (req, res) => res.sendFile(errPage));
 // end routes
 
 // start server
-app.listen(port, () => console.log(`server is listening at port ${port}`));
+app.listen(port, () => console.log(`server is listening at port ${port}`))
