@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(225deg, rgba(16, 82, 106, .6), rgba(54, 15, 90, .5));
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+#container .timer{
+  text-align: center;
+  gap: 60px;
+  flex-direction: column;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+#container .timer span {
+  font-size: 2.2rem;
+  display: flex;
+  position: relative;
+  left: 120px;
+}
+
+#container .buttons{
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+}
+
+#container .buttons input {
+  padding: 13px 13px;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#container .buttons input:nth-child(1){
+  background-color: green;
+}
+
+#container .buttons input:nth-child(2){
+  background-color: red;
+}
+
+#container .buttons input:nth-child(3){
+  background-color: grey;
+}
