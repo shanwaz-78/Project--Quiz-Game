@@ -26,7 +26,7 @@ app.post("/register", async (req, res) => {
     const encryptPassword = await bcrypt.hash(password, 5);
     await connection.query(
       "INSERT INTO user_info(name, email, password) VALUES(?, ?, ?)",
-      [name, email, encryptPassword]
+      [name, email, encryptPassword],
     );
     res.redirect("/login");
   } catch (error) {
