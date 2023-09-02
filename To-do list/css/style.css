@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=Fira+Sans:ital@1&family=Josefin+Sans:ital,wght@1,500&family=Lato&family=Poppins:ital,wght@0,300;1,400&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo-container {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-input {
+  flex-basis: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  width: 40%;
+}
+
+.add-btn:hover {
+  background-color: #438e46;
+}
+
+/* Dynamic Class */
+#show-todo {
+  padding: 0 0 0 30px;
+  display: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#show-todo ul {
+  display: flex;
+  position: relative;
+}
+
+#show-todo ul i {
+  cursor: pointer;
+  position: absolute;
+  right: 35px; 
+}
+
+#show-todo ul .fa-trash {
+  position: absolute;
+  right: 10px; 
+}
+/* End Dynamic Class */
+
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: #0f0f0f;
+  }
+  
+  .todo-container {
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  .add-input {
+    flex-basis: 70%;
+  }
+  
+  .add-btn {
+    width: 30%;
+  }
+}
