@@ -2573,6 +2573,8 @@ textarea.form-control {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -5px;
+  position: relative;
+  top: 40px;
   margin-left: -5px;
 }
 
@@ -6298,6 +6300,22 @@ a.badge-dark.focus {
 
   to {
     background-position: 0 0;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .container .haunted-house{
+    margin-top: 55px;
+  }
+  .container .second-img{
+    width: 60%;
+  }
+  .container .text{
+    position: relative;
+    top: 100px;
+  }
+  body {
+    background-color: rgba(.2, .3, .5, .3);
   }
 }
 
@@ -13406,6 +13424,15 @@ pre .code {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+.about-caption {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.about-caption span {
+  text-shadow: 1px 2px 4px rgba(0.6, 3, 3, 0.7);
+}
 
 @media (max-width: 767.98px) {
   .about {
@@ -13428,7 +13455,7 @@ pre .code {
 
 /* sections */
 .section {
-  padding: 70px 10px;
+  padding: 75px 10px;
 }
 
 .section .section-title {
@@ -13436,7 +13463,7 @@ pre .code {
 }
 
 .section .section-subtitle {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   font-weight: 400;
   opacity: 0.6;
 }
@@ -13456,4 +13483,23 @@ pre .code {
 .success_msg {
   float: right;
   color: green;
+}
+
+.container .haunted-house {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 7px;
+}
+.container .second-img{
+  width: 50%;
+  position: relative;
+  left: 50%;
+  border-top-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 3px 3px 8px rgba(4, 3, 2, .8);
+}
+.container .title {
+  position: relative;
+  top: 50px;
 }
