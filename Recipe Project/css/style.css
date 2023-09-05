@@ -37,20 +37,19 @@ nav {
 }
 
 #container .recipe h2 {
- position: relative;
- right: 20px;
+  position: relative;
+  right: 20px;
 }
-
 
 #container .recipe p {
   position: relative;
   right: 30px;
   font-size: 1.1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
-
-#container  .recipe .viewRecipe {
+#container .recipe .viewRecipe {
   background: #0c2461;
   color: #fff;
   padding: 10px;
@@ -60,4 +59,65 @@ nav {
   font-size: 14px;
   position: relative;
   left: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    background-color: #0f0f0f;
+    color: white;
+  }
+  #container .recipe {
+    box-shadow: 0 2px 5px rgba(224, 211, 211, 0.4);
+    height: 220px;
+  }
+  #container .recipe img {
+    position: relative;
+    bottom: 50px;
+  }
+  #container .recipe h2 {
+    position: relative;
+    top: 60px;
+    right: 120px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  #container .recipe > p {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1104px) {
+  body {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  #container .recipe {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    height: auto;
+  }
+  #container .recipe img {
+    position: static;
+    bottom: auto;
+  }
+  #container .recipe h2 {
+    position: relative;
+    top: auto;
+    right: auto;
+    font-family: Arial, sans-serif;
+    left: 15px;
+  }
+  #container .recipe > p {
+    display: block;
+    position: relative;
+    left: 6px;
+  }
+}
+
+@media screen and (min-width: 756px) and (max-width: 930px) {
+  #container .recipe h2 {
+    position: relative;
+  left: 4px;
+  }
+  #container .recipe > p {
+    left: 30px;
+  }
 }
