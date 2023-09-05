@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <h2>New User SignUp</h2>
+    </div>
+
+    <form action="">
+      <div class="formWrapper">
+        <div class="inputWrapper">
+          <input type="text" name="username" placeholder="UserName" autocomplete="off" maxlength="17" />
+          <p>UserName must be contain a 5-17 characters</p>
+        </div>
+        <div class="inputWrapper">
+          <input type="email" name="email" placeholder="Email" autocomplete="off" />
+          <p>Email must be contain a valid address, e.g. me@domail.com</p>
+        </div>
+        <div class="inputWrapper">
+          <input type="password" name="password" placeholder="Password" maxlength="20" />
+          <p>Password Must Alphanumeric (@._ and -) and be 8-20 characters</p>
+        </div>
+        <div class="inputWrapper">
+          <input type="number" name="telephone" placeholder="Telephone"/>
+          <p>Telephone must be a valid India Telephone number (10 Digits)</p>
+        </div>
+        <div class="submitBtn">
+          <button>Submit</button>
+        </div>
+      </div>
+    </form>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
