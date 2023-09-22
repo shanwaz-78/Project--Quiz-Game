@@ -1,10 +1,12 @@
+import env from "dotenv";
+env.config();
 const sendButton = document.querySelector(".chat-input i");
 const userInput = document.querySelector("textarea");
 const chatbox = document.querySelector(".chatbox");
 const showChatBot = document.querySelector(".show-chatbot");
 const chatbotToggler = document.querySelector(".chatbot-toggler i");
 
-const API_KEY = "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";
+const API_KEY = process.env.API_KEY;
 
 function handleChat() {
   const userMessage = userInput.value.trim().toLowerCase();
@@ -13,7 +15,7 @@ function handleChat() {
   userInput.value = "";
   setTimeout(() => {
     chatbox.appendChild(createChatLi("Thinking...", "incoming"));
-    generateResponse(userMessage);
+    handleUserInput(userMessage);
   }, 600);
 }
 
@@ -30,8 +32,23 @@ async function generateResponse(userMessage) {
       messages: [{ role: "user", content: userMessage }],
     }),
   };
-  fetch(API_URL, requestOptions).then(data => data.json()).then(resul => console.log(resul))
+  const response = await fetch(API_URL, requestOptions);
+  const data = await response.json();
+  // const chatbotResponse = data.choicee.message.content;
+  // chatbox.appendChild(createChatLi(chatbotResponse, "incoming"));
+  console.log(data);
 }
+
+function handleUserInput(userMessage) {
+  if (userMessage.includes("hello")) {
+    generateResponse("Hello there!");
+  } else if (userMessage.includes("help")) {
+    generateResponse("How can I assist you?");
+  } else {
+    generateResponse(userMessage);
+  }
+}
+
 function addOutgoingMsg() {
   handleChat();
 }
@@ -47,9 +64,18 @@ sendButton.addEventListener("click", (event) => {
   event.preventDefault();
   addOutgoingMsg();
 });
+
 userInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter" || event.key === "ENTER") {
-    event.preventDefault(); // Prevent to go to the next line.
-    sendButton.click()
+    event.preventDefault();
+    sendButton.click();
   }
+});
+
+showChatBot.addEventListener("click", () => {
+  chatbox.classList.remove("hidden");
+});
+
+chatbotToggler.addEventListener("click", () => {
+  chatbox.classList.toggle("hidden");
 });
