@@ -22,6 +22,7 @@ body {
   text-align: center;
   position: relative;
   top: 70px;
+  text-decoration: underline;
   right: 20px;
 }
 form {
@@ -30,6 +31,15 @@ form {
   align-items: center;
   position: relative;
   top: 100px;
+}
+form .formWrapper {
+  background-color:rgba(9, 97, 97,.8);
+  padding: 35px 35px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .formWrapper p {
   color: var(--text-color);
