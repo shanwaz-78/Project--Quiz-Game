@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #201b1b;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.image-container img {
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+  margin: 10px 30px;
+  box-shadow: 2px 4px 6px rgba(109, 102, 102, 0.7);
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn button {
+  padding: 8px 8px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  background: transparent;
+  transition: 0.3s all;
+}
+
+.btn button:hover {
+  background-color: #0f0f0f;
+  color: wheat;
+  box-shadow: 0px 2px 8px rgba(7, 44, 61, 0.7);
+  border: 1px solid green;
+}
+
+/* Cdn Icon */
+i {
+  color: #ffff;
+  font-size: 2rem;
+  border: 1px solid white;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  bottom: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 784px) {
+  body {
+    background-color: #ffff;
+  }
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+  }
+
+  .btn button {
+    font-size: 0.9rem;
+  }
+  .image-container img {
+    box-shadow: 2px 4px 6px rgba(24, 22, 22, 0.7);
+    cursor: pointer;
+  }
+  .btn button {
+    color: black;
+    border: 1px solid black;
+  }
+  i {
+    visibility: visible;
+    font-size: 1.3rem;
+    color: #0f0f0f;
+    border: 1px solid black;
+  }
+}
