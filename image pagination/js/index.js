@@ -16,7 +16,7 @@ function generateImages() {
 
 function showScrollBtn() {
   const currentImgCounter = generateImages();
-  currentImgCounter === 11
+  currentImgCounter >= 11
     ? (scrollBtn.style.visibility = "visible")
     : "hidden";
 }
