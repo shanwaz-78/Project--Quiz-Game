@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="themeIconWrapper">
+      <div class="theme-icon" id="darkTheme">
+        <i class="fa-solid fa-circle-half-stroke" id="icon"></i>
+      </div>
+    </div>
+    <div class="draggable-wrapper">
+      <h2>Draggable List</h2>
+      <div id="sortable-list" class="sortable-container">
+        <div class="sortable-item">1. John</div>
+        <div class="sortable-item">2. Alice</div>
+        <div class="sortable-item">3. Bob</div>
+        <div class="sortable-item">4. Eve</div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"
+      defer
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

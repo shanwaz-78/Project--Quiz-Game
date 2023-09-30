@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffff;
+  color: #fff;
+  overflow: hidden;
+}
+
+.draggable-wrapper {
+  position: relative;
+  left: 440px;
+  top: 190px;
+  box-sizing: border-box;
+}
+
+.draggable-wrapper h2 {
+  position: relative;
+  bottom: 15px;
+  left: 190px;
+  color: rgba(0, 30, 0, 0.8);
+  transition: 0.3s all;
+}
+
+.draggable-wrapper h2:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.sortable-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #777;
+  padding: 18px 18px;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+.sortable-container abbr {
+  text-decoration: none;
+}
+.sortable-item {
+  background-color: #555;
+  padding: 10px;
+  word-spacing: 5px;
+  margin: 7px;
+  cursor: grab;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.drag {
+  background-color: #888;
+}
+
+.themeIconWrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.themeIconWrapper .theme-icon {
+  width: 50px;
+  border-radius: 20px;
+  border: 2px solid rgba(12, 0, 0, 0.925);
+  padding: 4px 8px;
+}
+
+.themeIconWrapper .theme-icon i {
+  cursor: pointer;
+  color: #0f0f0f;
+}
+
+.iconAnimation {
+  animation: moveToEnd 0.3s forwards;
+}
+
+@keyframes moveToEnd {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+.removeAnimation {
+  animation: moveToStart 0.3s backwards;
+}
+
+@keyframes moveToStart {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
