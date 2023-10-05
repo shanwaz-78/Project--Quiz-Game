@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Recorder</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .recording {
+        position: absolute;
+        top: 40%;
+      }
+      .previewScreen {
+        border: 1px solid black;
+        height: 140px;
+        width: 350px;
+      }
+      button {
+        padding: 5px 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        margin: 8px;
+        position: relative;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="preview">
+        <h2>Preview</h2>
+        <video class="previewScreen" id="preview" autoplay muted></video>
+      </div>
+      <div class="buttons">
+        <button class="start" id="start">Start</button>
+        <button class="stop" id="stopBtn">Stop</button>
+      </div>
+      <div class="recording">
+        <h2>Record Screen</h2>
+        <video width="350" height="200" controls id="record"></video>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
