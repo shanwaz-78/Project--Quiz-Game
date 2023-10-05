@@ -1,4 +1,6 @@
 const tableBody = document.querySelector("tbody");
+const paginationNumbers = document.querySelectorAll("a");
+
 const itemsPerPage = 5;
 let currentPage = 1;
 
@@ -32,5 +34,16 @@ function showData(data) {
     tableBody.appendChild(row);
   }
 }
+function handleNumberChange() {
+  paginationNumbers.forEach((number) => {
+    number.addEventListener("click", (event) => {
+      event.preventDefault();
+      paginationNumbers.forEach((num) => num.classList.remove("active"));
+      event.target.classList.add("active");
+      fetchData("https://dummyjson.com/users");
+    });
+  });
+}
+handleNumberChange();
 
 fetchData("https://dummyjson.com/users");
