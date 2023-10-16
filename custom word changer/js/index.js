@@ -36,8 +36,11 @@ function handleBtnOptions() {
           outputField.textContent = clientGiveValue.toLowerCase();
           break;
         case "Abc":
-          outputField.textContent =
-            clientGiveValue.charAt(0).toUpperCase() + clientGiveValue.slice(1);
+          outputField.textContent = clientGiveValue
+            .trim()
+            .split(" ")
+            .map((elem) => elem.charAt(0).toUpperCase() + elem.slice(1).toLowerCase())
+            .join(" ");
           break;
         case "Bold":
           outputField.innerHTML = `<strong>${clientGiveValue}</strong>`;
