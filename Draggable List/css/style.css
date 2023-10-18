@@ -1,3 +1,4 @@
+/* Separate CSS file: style.css */
 * {
   margin: 0;
   padding: 0;
@@ -31,9 +32,12 @@ body {
 }
 
 .sortable-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 10px;
   background-color: #777;
   padding: 18px 18px;
   max-width: 500px;
@@ -44,12 +48,26 @@ body {
 .sortable-container abbr {
   text-decoration: none;
 }
+
 .sortable-item {
+  flex: 1; 
+  max-width: 200px; 
+  margin: 7px;
   background-color: #555;
   padding: 10px;
   word-spacing: 5px;
-  margin: 7px;
   cursor: grab;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.sortable-item2 {
+  flex: 1; 
+  max-width: 200px; 
+  margin: 7px;
+  background-color: #555;
+  padding: 10px;
   border-radius: 5px;
   font-size: 1.1rem;
   transition: background-color 0.3s ease;

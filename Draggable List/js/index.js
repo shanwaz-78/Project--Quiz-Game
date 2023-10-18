@@ -1,9 +1,21 @@
 const sortableList = document.getElementById("sortable-list");
+const sortableList2 = document.getElementById("sortable-list2");
 const themeIconWrapper = document.getElementById("darkTheme");
 const heading = document.querySelector("h2");
 
 function enableDragging() {
   const sortableOptions = {
+    group: "shared",
+    animation: 200,
+    ghostClass: "drag",
+    onUpdate: () => {
+      const sortableItems = document.querySelectorAll(".sortable-item");
+      const order = Array.from(sortableItems).map((item) => item.textContent);
+      localStorage.setItem("definedOrder", JSON.stringify(order));
+    },
+  };
+  const sortableOptions2 = {
+    group: "shared",
     animation: 200,
     ghostClass: "drag",
     onUpdate: () => {
@@ -13,7 +25,8 @@ function enableDragging() {
     },
   };
   const sortable = new Sortable(sortableList, sortableOptions);
-  return sortable;
+  const sortable2 = new Sortable(sortableList2, sortableOptions2);
+  return [sortable, sortable2];
 }
 
 function changeOrder() {
