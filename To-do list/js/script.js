@@ -1,5 +1,6 @@
 const userInput = document.getElementById("userInput");
 const addBtn = document.getElementById("add-btn");
+const todoWrapper = document.getElementsByClassName("todo-container")[0];
 const showToDo = document.getElementById("show-todo");
 
 function generateToDo() {
@@ -28,11 +29,17 @@ function addToDoIcon(ul, li) {
 function manipulateIcons(ul, deleteIcon) {
   deleteIcon.addEventListener("click", (event) => {
     event.preventDefault();
-    ul.remove();
+    ul.classList.add("animate__animated", "animate__hinge");
+    setTimeout(() => {
+      ul.remove();
+    }, 2000);
   });
 }
 
 addBtn.addEventListener("click", (event) => {
   event.preventDefault();
   generateToDo();
+});
+document.addEventListener("DOMContentLoaded", () => {
+  todoWrapper.classList.add("animate__animated", "animate__bounce");
 });
