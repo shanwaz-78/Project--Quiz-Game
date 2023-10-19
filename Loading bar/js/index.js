@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let percentage = 0;
   let animationId;
-
   function updateLoading() {
     if (percentage <= 100) {
       loadingFill.style.setProperty("--loading-progress", percentage + "%");
