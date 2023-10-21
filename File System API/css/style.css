@@ -1,0 +1,19 @@
+body {
+  background-color: aliceblue;
+}
+
+input {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 7px 7px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: 1px inset black;
+}
+.saveButton {
+  display: none;
+}
