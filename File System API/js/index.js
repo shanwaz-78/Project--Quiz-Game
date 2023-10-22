@@ -1,6 +1,7 @@
 const wrapper = document.getElementsByClassName("wrapper")[0];
 const saveButton = document.getElementById("saveButton");
 const displayContent = document.querySelector(".displayContent");
+const recordedChunks = []
 const fileReader = new FileReader();
 let modifiedContent = "";
 
@@ -14,6 +15,27 @@ function enableFileReading() {
     saveButton.style.display = "inline";
   });
   fileInput.click();
+}
+
+async function captureScreen(mediaDeviceOptions) {
+  try {
+    const mediaStream = await navigator.mediaDevices.getDisplayMedia(
+      mediaDeviceOptions
+    );
+    const mediaRecorder = new MediaRecorder(mediaStream);
+    mediaRecorder.ondataavailable = function (event) {
+      recordedChunks.push(event.data);
+    };
+    mediaRecorder.onstop = function () {
+      const blob = new Blob(recordedChunks, { type: recordedChunks[0].type });
+      const objectURL = URL.createObjectURL(blob);
+      recorded.src = objectURL;
+    };
+    mediaRecorder.start();
+    preview.srcObject = mediaStream;
+  } catch (error) {
+    console.log("Error", error);
+  }
 }
 
 function saveModifiedData() {
