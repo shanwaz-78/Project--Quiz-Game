@@ -16,7 +16,7 @@ function validate(field, regex) {
 }
 
 inputs.forEach((input) => {
-  input.addEventListener("keyup", (event) => {
+  input.addEventListener("input", (event) => {
     validate(event.target, pattern[event.target.attributes.name.value]);
   });
 });
