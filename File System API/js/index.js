@@ -5,6 +5,7 @@ const recordedChunks = []
 const fileReader = new FileReader();
 let modifiedContent = "";
 
+
 function enableFileReading() {
   fileInput.addEventListener("change", (event) => {
     event.preventDefault();
