@@ -17,14 +17,16 @@ async function startRecording() {
     };
 
     mediaRecorder.onstop = () => {
-      const blob = new Blob(recordedChunks, { type: recordedChunks[0].type });
+      const blob = new Blob(recordedChunks, { type: "video/webm" });
       const url = URL.createObjectURL(blob);
       videoElem.src = url;
     };
+    mediaRecorder.start();
     preview.srcObject = stream;
   } catch (error) {
     console.log("Error:", error);
   }
 }
 
+stopBtn.addEventListener("click", () => mediaRecorder.stop());
 startBtn.addEventListener("click", startRecording);
