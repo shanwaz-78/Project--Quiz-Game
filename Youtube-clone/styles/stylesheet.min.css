@@ -1,4 +1,3 @@
-/* generel */
 p {
   font-family: roboto, Arial;
   margin-top: 0px;
@@ -12,7 +11,6 @@ body {
   background-color: rgb(248, 248, 248);
   padding-bottom: 200px;
 }
-/* header */
 .header {
   height: 55px;
   display: flex;
@@ -167,7 +165,6 @@ body {
   pointer-events: none;
   white-space: nowrap;
 }
-/* video */
 .thumbnail {
   width: 100%;
 }
@@ -226,7 +223,6 @@ body {
   font-family: roboto;
   border-radius: 2px;
 }
-/* video */
 .thumbnail {
   width: 100%;
 }
@@ -284,7 +280,6 @@ body {
   font-family: roboto;
   border-radius: 2px;
 }
-/* sidebar */
 .sidebar {
   width: 72px;
   position: fixed;
