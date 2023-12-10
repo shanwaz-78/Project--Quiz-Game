@@ -1,5 +1,4 @@
-import env from "dotenv";
-env.config();
+import 'dotenv/config'
 const sendButton = document.querySelector(".chat-input i");
 const userInput = document.querySelector("textarea");
 const chatbox = document.querySelector(".chatbox");
@@ -34,8 +33,8 @@ async function generateResponse(userMessage) {
   };
   const response = await fetch(API_URL, requestOptions);
   const data = await response.json();
-  // const chatbotResponse = data.choicee.message.content;
-  // chatbox.appendChild(createChatLi(chatbotResponse, "incoming"));
+  const chatbotResponse = data.choicee.message.content;
+  chatbox.appendChild(createChatLi(chatbotResponse, "incoming"));
   console.log(data);
 }
 
