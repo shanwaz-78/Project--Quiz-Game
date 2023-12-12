@@ -9,11 +9,6 @@ function generateImages() {
     const API_URL = `https://picsum.photos/300?random=${i}`;
     const imgElement = document.createElement("img");
 
-    // Check if the browser supports the loading attribute
-    if ("loading" in HTMLImageElement.prototype) {
-      imgElement.loading = "lazy";
-    }
-
     imgElement.src = API_URL;
     // imageContainer.className = 'image-container'
     imgElement.setAttribute('alt', 'Image Stocks')
