@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="message" class="message">
+      <p id="income-message"></p>
+    </div>
+
+    <form id="tax-form">
+      <div class="input-wrapper">
+        <div class="error-text">Please Enter Numbers Only.</div>
+        <label for="annual-income">Gross annual income:</label>
+        <div class="input-container">
+          <input
+            type="text"
+            name="annualIncome"
+            placeholder="Enter gross annual income"
+            required
+          />
+          <div class="error-icon">!</div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <div class="error-text">Please Enter Numbers Only.</div>
+        <label for="extra-income">Extra income:</label>
+        <div class="input-container">
+          <input
+            type="text"
+            name="extraIncome"
+            placeholder="Enter extra income from other sources"
+            required
+          />
+          <div class="error-icon">!</div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="ageGroup">Age group:</label>
+        <select id="ageGroup" name="ageGroup" required>
+          <option value="none">none</option>
+          <option value="Less then 40">Less then 40</option>
+          <option value="40 to 60">40 to 60</option>
+          <option value="60 plus">60 plus</option>
+        </select>
+      </div>
+
+      <div class="input-wrapper">
+        <div class="error-text">Please Enter Numbers Only.</div>
+        <label for="total-deductions">Total applicable deductions:</label>
+        <div class="input-container">
+          <input
+            type="text"
+            name="totalDeductions"
+            placeholder="Add total applicable deductions"
+            required
+          />
+          <div class="error-icon">!</div>
+        </div>
+      </div>
+
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

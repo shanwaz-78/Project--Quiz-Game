@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+form {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+select {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.error-icon {
+  position: absolute;
+  left: 98%;
+  top: calc(50% - 0.5rem);
+  color: red;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.message {
+  position: absolute;
+  top: 20%;
+  background-color: #fff;
+  padding: 120px 120px;
+  border-radius: 4px;
+  right: 25%;
+  width: 50%;
+  height: 50%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.message > h2{
+  text-align: center;
+}
+
+.error-text {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+  justify-content: end;
+  bottom: 10px; 
+  font-size: 1rem;
+  padding: 10px 10px;
+  left: 490px;
+  top: 50px;
+  z-index: 10;
+  display: none;
+}
