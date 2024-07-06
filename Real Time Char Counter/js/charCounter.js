@@ -18,7 +18,7 @@ input.addEventListener("input", (e) => {
 });
 
 copy_btn.addEventListener("click", (event) => {
-  event.preventDefault()
+  event.preventDefault();
   input.select();
   input.setSelectionRange(0, input.value.length);
   document.execCommand("copy");

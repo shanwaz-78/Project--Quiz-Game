@@ -6,13 +6,14 @@ async function fetchDictionary(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      console.log(`Word Details not Found`);
+	throw new Error(`Word Details not Found`);
     }
     const data = await response.json();
     const { definitions } = data[0].meanings[2];
     return definitions;
   } catch (error) {
-    console.log(error);
+    console.log(error.message, error);
+    throw error;
   }
 }
 
@@ -29,17 +30,17 @@ async function generateDefinitions(url, id) {
 
   output.appendChild(closeIcon);
 
-  definitions.forEach((eachDefinition) => {
+  definitions.forEach(({definition, example}) => {
     const lineBreak = document.createElement("br");
     const li = document.createElement("li");
 
     if (id === "definitions") {
-      li.textContent = eachDefinition.definition;
+      li.textContent = definition;
 
       output.appendChild(li);
       output.appendChild(lineBreak);
     } else {
-      li.textContent = eachDefinition.example;
+      li.textContent = example;
 
       output.appendChild(li);
       output.appendChild(lineBreak);
@@ -51,8 +52,8 @@ async function generateDefinitions(url, id) {
 
 buttonsWrapper.addEventListener("click", (event) => {
   event.preventDefault();
-  const userGivenWord = userInput.value.trim();
-  const API_URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${userGivenWord}`;
+  const {value} = userInput;
+  const API_URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${value.trim()}`;
 
   if (event.target.id === "definitions") {
     generateDefinitions(API_URL, event.target.id);

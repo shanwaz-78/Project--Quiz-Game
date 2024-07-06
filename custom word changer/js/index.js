@@ -3,10 +3,6 @@ const formatBtns = document.querySelectorAll(".btn");
 const copyBtn = document.getElementById("copy");
 const outputField = document.getElementById("output");
 
-function handleUserInput() {
-  outputField.textContent = inputField.value;
-}
-
 function handleBtnAnimation(prefix = "animate__") {
   formatBtns.forEach((btn) =>
     btn.addEventListener("click", (event) => {
@@ -24,6 +20,7 @@ function handleBtnAnimation(prefix = "animate__") {
 }
 
 function handleBtnOptions() {
+  outputField.textContent = inputField.value.trim();
   formatBtns.forEach((btn) =>
     btn.addEventListener("click", (event) => {
       event.preventDefault();
@@ -39,7 +36,10 @@ function handleBtnOptions() {
           outputField.textContent = clientGiveValue
             .trim()
             .split(" ")
-            .map((elem) => elem.charAt(0).toUpperCase() + elem.slice(1).toLowerCase())
+            .map(
+              (elem) =>
+                elem.charAt(0).toUpperCase() + elem.slice(1).toLowerCase()
+            )
             .join(" ");
           break;
         case "Bold":
@@ -59,5 +59,4 @@ function handleBtnOptions() {
   );
 }
 handleBtnAnimation();
-handleBtnOptions();
-inputField.addEventListener("input", handleUserInput);
+inputField.addEventListener("input", handleBtnOptions);

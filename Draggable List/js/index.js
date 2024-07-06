@@ -46,7 +46,7 @@ function changeIconColors() {
   const body = document.body;
 
   if (icon.classList.contains("iconAnimation")) {
-    body.style.backgroundColor = "#0f0f0f";
+    body.style.backgroundColor = "#333";
     themeIconWrapper.style.borderColor = "#ffff";
     icon.style.color = "#fff";
     heading.style.color = "#ffff";

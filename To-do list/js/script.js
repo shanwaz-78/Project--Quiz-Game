@@ -4,8 +4,8 @@ const todoWrapper = document.getElementsByClassName("todo-container")[0];
 const showToDo = document.getElementById("show-todo");
 
 function generateToDo() {
-  const userInputValue = userInput.value;
-  if (userInputValue.trim() === "") {
+  const userInputValue = userInput.value.trim();
+  if (userInputValue === "") {
     alert("Cannot be empty");
     return;
   }

@@ -9,6 +9,7 @@ function generateTable() {
     alert("Please enter a number");
     return;
   }
+  numberTable.innerHTML = '';
   for (let i = converStartNum; i <= convertEndNum; i++) {
     const tableContainer = document.createElement("div");
     tableContainer.className = "table-container";

@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github | Repo Finder</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <input
-        type="text"
-        id="input"
-        placeholder="Enter Repo Name"
-        autocomplete="off"
-      />
-      <button>Find Repos</button>
-    </header>
-    <div class="wrapper"></div>
-  </body>
-  <script src="./js/index.js" async></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Repositories</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/index.js" defer></script>
+</head>
+<body>
+
+  <div>
+    <label for="username">GitHub Username:</label>
+    <input type="text" id="username">
+    <label for="perPage">Repositories per Page:</label>
+    <input type="number" id="perPage" value="10">
+    <button onclick="getRepositories()">Get Repositories</button>
+  </div>
+
+  <div id="loader" style="display: none;">Loading...</div>
+  <div id="repository-list"></div>
+  <div id="pagination"></div>
+</body>
 </html>
